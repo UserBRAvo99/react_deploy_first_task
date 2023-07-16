@@ -62,6 +62,9 @@ const StyledListItem = styled.li`
   padding: 10px;
   border-radius: 20px;
   border: solid 1px black;
+  &:hover {
+    box-shadow: 0px 0px 51px 0px rgba(47, 212, 146, 1);
+  }
 `;
 
 export default RobotUsersList;
