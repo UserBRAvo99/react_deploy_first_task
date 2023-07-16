@@ -1,9 +1,12 @@
+import RobotUsers from "./components/RobotUsers";
+import apiRobots from "./components/RobotUsers/fake_robot_api.json";
+
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <h1>Hi</h1>
+      <RobotUsers usersData={apiRobots} />
     </div>
   );
 }
