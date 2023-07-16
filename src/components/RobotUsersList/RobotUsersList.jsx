@@ -1,10 +1,37 @@
 import PropTypes from "prop-types";
 
 function RobotUsersList({ users }) {
-  console.log(users);
   return (
     <ul>
-      <li>First Users</li>
+      {users.map(
+        ({
+          id,
+          firstName,
+          lastName,
+          maidenName,
+          age,
+          image,
+          phone,
+          gender,
+        }) => {
+          return (
+            <li key={id}>
+              <ul>
+                <li>
+                  <img src={image} alt={firstName} />
+                </li>
+                <li>
+                  <p>{firstName}</p>
+                  <p>{lastName}</p>
+                  <p>{maidenName}</p>
+                </li>
+                <li>{age}</li>
+                <li>{phone}</li>
+              </ul>
+            </li>
+          );
+        }
+      )}
     </ul>
   );
 }
