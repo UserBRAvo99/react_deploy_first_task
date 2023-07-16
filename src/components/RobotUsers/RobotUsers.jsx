@@ -1,11 +1,12 @@
 import PropTypes from "prop-types";
 import RobotUsersList from "../RobotUsersList";
+import RobotHeader from "../RobotHeader";
 
 function RobotUsers({ usersData }) {
   const { users } = usersData;
-  // console.log(id, fistName, lastName, maidenName, age, image, phone);
   return (
     <div>
+      <RobotHeader users={users} />
       <RobotUsersList users={users} />
     </div>
   );
