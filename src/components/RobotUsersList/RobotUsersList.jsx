@@ -1,10 +1,11 @@
 import PropTypes from "prop-types";
+import { styled } from "styled-components";
 
 import style from "./robotUsersList.module.scss";
 
 function RobotUsersList({ users }) {
   return (
-    <ul className={style.list}>
+    <StyledList>
       {users.map(
         ({
           id,
@@ -17,7 +18,10 @@ function RobotUsersList({ users }) {
           gender,
         }) => {
           return (
-            <li key={id} className={style.item}>
+            <StyledListItem
+              key={id}
+              className={`${gender === "male" ? style.blue : style.pink}`}
+            >
               <ul>
                 <li>
                   <img src={image} alt={firstName} />
@@ -37,13 +41,28 @@ function RobotUsersList({ users }) {
                   Gender: <span>{gender}</span>
                 </li>
               </ul>
-            </li>
+            </StyledListItem>
           );
         }
       )}
-    </ul>
+    </StyledList>
   );
 }
+
+const StyledList = styled.ul`
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+`;
+
+const StyledListItem = styled.li`
+  max-width: 300px;
+  padding: 10px;
+  border-radius: 20px;
+  border: solid 1px black;
+`;
 
 export default RobotUsersList;
 

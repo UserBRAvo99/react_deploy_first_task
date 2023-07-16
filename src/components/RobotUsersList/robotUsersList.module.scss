@@ -1,16 +1,16 @@
-.list {
-  width: 100vw;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-}
-.item {
-  max-width: 300px;
-  background-color: azure;
-  padding: 10px;
-  border-radius: 20px;
-}
+// .list {
+//   width: 100vw;
+//   display: flex;
+//   flex-wrap: wrap;
+//   gap: 20px;
+//   justify-content: center;
+// }
+// .item {
+//   max-width: 300px;
+//   padding: 10px;
+//   border-radius: 20px;
+//   border: solid 1px black;
+// }
 .itemName {
   display: flex;
   justify-content: space-around;
@@ -22,4 +22,10 @@
     margin-left: auto;
     padding: 5px;
   }
+}
+.blue {
+  background-color: #99ccff;
+}
+.pink {
+  background-color: #ff99ff;
 }
